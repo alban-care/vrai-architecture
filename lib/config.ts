@@ -1,3 +1,5 @@
+import { Icons } from "@/components/icons";
+
 export const appName = "Vrai Architecture";
 export const appTitle =
   "Vrai Architecture | Agence d'architecture, d'architecture d'intérieur et d'illustration";
@@ -20,10 +22,10 @@ export const appLocale = "fr-FR";
 export const appUrl = "https://vrai-architecture.fr";
 
 export const appMenu = [
-  { label: "Accueil", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Projets", href: "/projets" },
-  { label: "Contact", href: "/contact" },
+  { label: "Accueil", href: "/", Icon: Icons.homeIcon },
+  { label: "Services", href: "/services", Icon: Icons.packageOpenIcon },
+  { label: "Projets", href: "/projets", Icon: Icons.componentIcon },
+  { label: "Contact", href: "/contact", Icon: Icons.mailIcon },
 ];
 
 export const categories = [
@@ -115,18 +117,22 @@ export const services = [
 export const socialsLinks = [
   {
     label: "linkedin",
+    Icon: Icons.linkedinIcon,
     href: "https://www.linkedin.com/in/isabelle-roye-619a9b110",
   },
   {
     label: "instagram",
+    Icon: Icons.instagramIcon,
     href: "https://www.instagram.com/isabelle.roye.vandeville",
   },
   {
     label: "facebook",
+    Icon: Icons.facebookIcon,
     href: "https://www.facebook.com/isabelle.roye.artiste",
   },
   {
     label: "whatsApp",
+    Icon: Icons.whatsAppIcon,
     href: "https://wa.me/0612354795",
   },
 ];
