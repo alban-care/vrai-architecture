@@ -18,12 +18,12 @@ concurrency:
   cancel-in-progress: true # Cancel previous runs if a new one starts
 
 jobs:
+  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
+      - name: Checkout
         uses: actions/checkout@v4
-
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -40,7 +40,7 @@ jobs:
           else
             echo "Unable to determine package manager"
             exit 1
-
+          fi
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
