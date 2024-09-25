@@ -3,6 +3,7 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 export const Icons = {
   logoIcon: (props: IconProps) => (
     <svg
+      aria-label="Logo de l'agence"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       aria-hidden="true"
@@ -29,6 +30,7 @@ export const Icons = {
   ),
   homeIcon: (props: IconProps) => (
     <svg
+      aria-label="Icone de la page d'accueil"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -46,6 +48,7 @@ export const Icons = {
   ),
   componentIcon: (props: IconProps) => (
     <svg
+      aria-label="Icone des projets"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -65,6 +68,7 @@ export const Icons = {
   ),
   packageOpenIcon: (props: IconProps) => (
     <svg
+      aria-label="Icone des services"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -84,6 +88,7 @@ export const Icons = {
   ),
   mailIcon: (props: IconProps) => (
     <svg
+      aria-label="Icone de contact par mail"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -101,6 +106,7 @@ export const Icons = {
   ),
   instagramIcon: (props: IconProps) => (
     <svg
+      aria-label="Icone d'Instagram"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       aria-hidden="true"
@@ -118,6 +124,7 @@ export const Icons = {
   ),
   twitterIcon: (props: IconProps) => (
     <svg
+      aria-label="Icone de Twitter"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       aria-hidden="true"
@@ -139,6 +146,7 @@ export const Icons = {
   ),
   linkedinIcon: (props: IconProps) => (
     <svg
+      aria-label="Icone de LinkedIn"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       aria-hidden="true"
@@ -162,6 +170,7 @@ export const Icons = {
   ),
   facebookIcon: (props: IconProps) => (
     <svg
+      aria-label="Icone de Facebook"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -180,6 +189,7 @@ export const Icons = {
   ),
   whatsAppIcon: (props: IconProps) => (
     <svg
+      aria-label="Icone de WhatsApp"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
