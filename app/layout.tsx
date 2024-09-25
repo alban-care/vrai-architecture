@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat_Alternates, Open_Sans } from "next/font/google";
 import { appName, appDescription, appLocale } from "@/lib/config";
+import { Providers } from "@/app/providers";
+import { cn } from "@/lib/utils";
 import "./globals.css";
 
 const OpenSans = Open_Sans({
@@ -61,12 +63,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={appLocale} suppressHydrationWarning>
-      <body className={(OpenSans.variable, montserratAlternates.variable)}>
-        <div className="h-full w-full flex flex-col">
-          {/* <Header /> */}
-          {children}
-          {/* <Footer /> */}
-        </div>
+      <body className={cn(OpenSans.variable, montserratAlternates.variable)}>
+        <Providers>
+          <div className="h-full w-full flex flex-col">
+            {/* <Header /> */}
+            {children}
+            {/* <Footer /> */}
+          </div>
+        </Providers>
       </body>
     </html>
   );
