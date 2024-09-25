@@ -5,7 +5,7 @@ import { Providers } from "@/app/providers";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
-const OpenSans = Open_Sans({
+const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -63,7 +63,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={appLocale} suppressHydrationWarning>
-      <body className={cn(OpenSans.variable, montserratAlternates.variable)}>
+      <body className={cn(openSans.variable, montserratAlternates.variable)}>
         <Providers>
           <div className="h-full w-full flex flex-col">
             {/* <Header /> */}
