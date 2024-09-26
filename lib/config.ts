@@ -1,5 +1,8 @@
 import { Icons } from "@/components/icons";
 
+export const contactEmail = "contact@vrai-architecture.fr";
+export const contactPhone = "+33 6 12 35 47 95";
+
 export const appName = "Vrai Architecture";
 export const appTitle =
   "Vrai Architecture | Agence d'architecture, d'architecture d'intérieur et d'illustration";
@@ -25,7 +28,6 @@ export const appMenu = [
   { label: "Accueil", href: "/", Icon: Icons.homeIcon },
   { label: "Services", href: "/services", Icon: Icons.packageOpenIcon },
   { label: "Projets", href: "/projets", Icon: Icons.componentIcon },
-  { label: "Contact", href: "/contact", Icon: Icons.mailIcon },
 ];
 
 export const categories = [
@@ -137,5 +139,20 @@ export const socialsLinks = [
   },
 ];
 
-export const contactEmail = "contact@vrai-architecture.fr";
-export const contactPhone = "+33 6 12 35 47 95";
+export const contactLinks = [
+  {
+    label: "email",
+    Icon: Icons.mailIcon,
+    href: contactEmail,
+  },
+  {
+    label: "téléphone",
+    Icon: Icons.phoneIcon,
+    href: contactPhone,
+  },
+  {
+    label: "message",
+    Icon: Icons.messageCircleIcon,
+    href: "/contact",
+  },
+];
