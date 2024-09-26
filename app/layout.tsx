@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Montserrat_Alternates, Open_Sans } from "next/font/google";
 import { appName, appDescription, appLocale } from "@/lib/config";
 import { Providers } from "@/app/providers";
+import { Header } from "@/app/header";
+import { Footer } from "@/app/footer";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
@@ -66,9 +68,9 @@ export default function RootLayout({
       <body className={cn(openSans.variable, montserratAlternates.variable)}>
         <Providers>
           <div className="h-full w-full flex flex-col">
-            {/* <Header /> */}
+            <Header />
             {children}
-            {/* <Footer /> */}
+            <Footer />
           </div>
         </Providers>
       </body>
