@@ -65,11 +65,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={appLocale} suppressHydrationWarning>
-      <body className={cn(openSans.variable, montserratAlternates.variable)}>
+      <body
+        className={cn(
+          "min-h-screen h-full flex flex-col",
+          openSans.variable,
+          montserratAlternates.variable
+        )}
+      >
         <Providers>
-          <div className="h-full w-full flex flex-col">
+          <div className="h-full w-full flex-1 flex flex-col">
             <Header />
-            {children}
+            <div className="flex-grow">{children}</div>
             <Footer />
           </div>
         </Providers>
