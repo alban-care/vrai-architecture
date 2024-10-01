@@ -48,7 +48,7 @@ export function Carousel({ children, initialIndex = 0 }: CarouselProps) {
   }, [children.length]);
 
   return (
-    <div className="w-full h-full top-0 left-0 flex flex-col justify-center items-center">
+    <div className="relative w-full h-full top-0 left-0 flex flex-col justify-center items-center">
       <div className="relative w-full h-full">
         <AnimatePresence initial={false}>
           {children.map((child, index) =>

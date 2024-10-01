@@ -61,7 +61,7 @@ export function HomeSlideshow() {
     );
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden -z-10">
+    <div className="absolute top-0 left-0 w-screen h-screen overflow-hidden -z-10">
       <Carousel>
         {slider.map((slide, index) => (
           <div
