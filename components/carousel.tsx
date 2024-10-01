@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence, Transition } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const autoplay_interval = 5000;
 
