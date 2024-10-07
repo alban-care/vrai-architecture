@@ -9,14 +9,6 @@ interface Params {
   };
 }
 
-export async function generateStaticPaths() {
-  const paths = await generateStaticParams();
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const projects = await getAllFilesData("projects");
   return projects.map((project) => ({
