@@ -1,5 +1,7 @@
 import { Icons } from "@/components/icons";
 
+export const appMdxProjectsDir = "content/projects";
+
 export const contactEmail = "contact@vrai-architecture.fr";
 export const contactPhone = "+33 6 12 35 47 95";
 
