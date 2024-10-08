@@ -1,74 +1,46 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
-import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Carousel } from "@/components/carousel";
 
 const sliders = [
   {
     text: "Architecture",
-    src: () => import("@/public/img/slider/architecture.jpg"),
+    src: require("@/public/img/slider/architecture.jpg"),
     alt: "Illustration d'un projet d'architecture",
   },
   {
     text: "Architecture d'intérieure",
-    src: () => import("@/public/img/slider/architecture-interieure.jpg"),
+    src: require("@/public/img/slider/architecture-interieure.jpg"),
     alt: "Illustration d'un projet d'architecture d'intérieure",
   },
   {
     text: "Agencement",
-    src: () => import("@/public/img/slider/agencement.jpg"),
+    src: require("@/public/img/slider/agencement.jpg"),
     alt: "Illustration d'un projet d'agencement",
   },
   {
     text: "Piscine",
-    src: () => import("@/public/img/slider/piscine.jpg"),
+    src: require("@/public/img/slider/piscine.jpg"),
     alt: "Illustration d'un projet de piscine",
   },
   {
     text: "Boutique",
-    src: () => import("@/public/img/slider/boutique.jpg"),
+    src: require("@/public/img/slider/boutique.jpg"),
     alt: "Illustration d'un projet de boutique",
   },
   {
     text: "Restaurant",
-    src: () => import("@/public/img/slider/restaurant.jpg"),
+    src: require("@/public/img/slider/restaurant.jpg"),
     alt: "Illustration d'un projet de restaurant",
   },
 ];
 
 export function HomeSlideshow() {
-  const [slider, setSlider] = useState<
-    { src: StaticImageData; text: string; alt: string }[]
-  >([]);
-
-  useEffect(() => {
-    const fetchImages = async () => {
-      const images = await Promise.all(
-        sliders.map(async (slide) => {
-          const image = await slide.src();
-          return {
-            ...slide,
-            src: image.default,
-          };
-        })
-      );
-
-      setSlider(images);
-    };
-
-    fetchImages();
-  }, []);
-
-  if (slider.length === 0)
-    return (
-      <div className="h-full flex justify-center items-center">Loading...</div>
-    );
-
   return (
     <div className="absolute top-0 left-0 w-screen h-screen overflow-hidden -z-10">
       <Carousel>
-        {slider.map((slide, index) => (
+        {sliders.map((slide, index) => (
           <div
             key={index}
             className="w-full h-full flex justify-center items-center"
