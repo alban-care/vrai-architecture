@@ -50,6 +50,7 @@ export function HomeSlideshow() {
                 src={slide.src}
                 alt={slide.alt}
                 className="w-full h-full object-cover object-center"
+                unoptimized
               />
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-35 flex flex-col justify-center items-center">
                 <h1 className="text-4xl text-white font-bold">{slide.text}</h1>
