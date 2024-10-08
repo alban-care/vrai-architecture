@@ -53,7 +53,9 @@ export function HomeSlideshow() {
                 unoptimized
               />
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-35 flex flex-col justify-center items-center">
-                <h1 className="text-4xl text-white font-bold">{slide.text}</h1>
+                <h1 className="w-full text-center text-4xl text-white font-bold">
+                  {slide.text}
+                </h1>
               </div>
             </div>
           </div>
