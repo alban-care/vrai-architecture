@@ -13,13 +13,16 @@ export const appDescription =
   "Vrai Architecture est une agence d'architecture spécialisée dans la conception de bâtiments et d'espaces intérieurs.";
 
 export const appKeywords = [
-  "architecture",
-  "conception",
-  "bâtiment",
-  "espace",
-  "intérieur",
-  "design",
-  "illustration",
+  "Architecture",
+  "Extension",
+  "Rénovation",
+  "Architecture intérieure",
+  "Agencement",
+  "Aménagement global",
+  "Habitat",
+  "Tertiaire",
+  "Boutique",
+  "Restaurant",
 ];
 
 export const appAuthor = "Isabelle Roye Vandeville";

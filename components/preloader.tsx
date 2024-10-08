@@ -11,8 +11,6 @@ interface PreloaderProps {
   size?: string;
 }
 
-const DELAY_INIT = 1000;
-const DELAY_SUB = 150;
 const defaultWords = appKeywords || [
   "Hello",
   "Bonjour",
@@ -23,6 +21,9 @@ const defaultWords = appKeywords || [
   "Guten tag",
   "Hallo",
 ];
+
+const DELAY_INIT = 1000;
+const DELAY_SUB = DELAY_INIT / defaultWords.length;
 
 const animationConfig = {
   opacity: {
