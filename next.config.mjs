@@ -3,7 +3,7 @@ import createMDX from "@next/mdx";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: process.env.NODE_ENV !== "production" ? "" : "/vrai-architecture",
-  output: "export",
+  output: process.env.NODE_ENV !== "production" ? undefined : "export",
   reactStrictMode: true,
 };
 
