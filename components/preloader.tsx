@@ -22,32 +22,33 @@ const defaultWords = appKeywords || [
   "Hallo",
 ];
 
-const DELAY_INIT = 1000;
-const DELAY_SUB = DELAY_INIT / defaultWords.length;
+const TOTAL_DURATION = 15000; // 3 seconds total duration
+const DELAY_INIT = 3000; // Initial delay for the first word
+const DELAY_SUB = (TOTAL_DURATION - DELAY_INIT) / (defaultWords.length - 1); // Delay for each subsequent word
 
 const animationConfig = {
   opacity: {
     initial: { opacity: 0 },
     enter: {
       opacity: 0.75,
-      transition: { duration: 1, delay: 0.2 },
+      transition: { duration: 0.5, delay: 0.2 }, // Shorter opacity duration
     },
   },
   slideUp: {
     initial: { top: 0 },
     exit: {
       top: "-100vh",
-      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+      transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1], delay: 0.1 }, // Adjusted to fit within 3s
     },
   },
   curve: (initPath: string, targetPath: string) => ({
     initial: {
       d: initPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] }, // Curve animation duration
     },
     exit: {
       d: targetPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
+      transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1], delay: 0.1 }, // Synchronized with slideUp
     },
   }),
 };
@@ -61,13 +62,13 @@ export function Preloader({
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
 
-  /* Effect to manage the end of the preloading after 2 seconds */
+  /* Effect to manage the end of the preloading after 3 seconds */
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
       document.body.style.cursor = "default";
       window.scrollTo(0, 0);
-    }, 2000);
+    }, TOTAL_DURATION);
 
     return () => clearTimeout(timeout);
   }, []);
