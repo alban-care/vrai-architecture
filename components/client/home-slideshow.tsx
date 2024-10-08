@@ -6,29 +6,34 @@ import { Carousel } from "@/components/carousel";
 
 const sliders = [
   {
-    text: "Rénovation",
-    src: () => import("@/public/img/slider/bleu-haussmannien.jpg"),
-    alt: "Rénovation d'un appartement haussmannien",
+    text: "Architecture",
+    src: () => import("@/public/img/slider/architecture.jpg"),
+    alt: "Illustration d'un projet d'architecture",
   },
   {
-    text: "Conception",
-    src: () => import("@/public/img/slider/boutique-bouton-noir.jpg"),
-    alt: "Conception d'une boutique de luxe",
+    text: "Architecture d'intérieure",
+    src: () => import("@/public/img/slider/architecture-interieure.jpg"),
+    alt: "Illustration d'un projet d'architecture d'intérieure",
   },
   {
     text: "Agencement",
-    src: () => import("@/public/img/slider/plans-de-vente.jpg"),
-    alt: "Illustration d'un projet d'aménagement intérieur",
+    src: () => import("@/public/img/slider/agencement.jpg"),
+    alt: "Illustration d'un projet d'agencement",
   },
   {
-    text: "Décoration",
-    src: () => import("@/public/img/slider/restaurant-madam.jpg"),
-    alt: "Décoration d'un restaurant",
+    text: "Piscine",
+    src: () => import("@/public/img/slider/piscine.jpg"),
+    alt: "Illustration d'un projet de piscine",
   },
   {
-    text: "Aménagement",
-    src: () => import("@/public/img/slider/travailler-autrement.jpg"),
-    alt: "Aménagement de bureaux",
+    text: "Boutique",
+    src: () => import("@/public/img/slider/boutique.jpg"),
+    alt: "Illustration d'un projet de boutique",
+  },
+  {
+    text: "Restaurant",
+    src: () => import("@/public/img/slider/restaurant.jpg"),
+    alt: "Illustration d'un projet de restaurant",
   },
 ];
 
@@ -74,7 +79,7 @@ export function HomeSlideshow() {
                 alt={slide.alt}
                 className="w-full h-full object-cover object-center"
               />
-              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center">
+              <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-35 flex flex-col justify-center items-center">
                 <h1 className="text-4xl text-white font-bold">{slide.text}</h1>
               </div>
             </div>
