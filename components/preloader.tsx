@@ -22,8 +22,8 @@ const defaultWords = appKeywords || [
   "Hallo",
 ];
 
-const TOTAL_DURATION = 15000; // 3 seconds total duration
-const DELAY_INIT = 3000; // Initial delay for the first word
+const TOTAL_DURATION = 5000; // Total duration of the preloader animation (5s)
+const DELAY_INIT = 1000; // Initial delay for the first word
 const DELAY_SUB = (TOTAL_DURATION - DELAY_INIT) / (defaultWords.length - 1); // Delay for each subsequent word
 
 const animationConfig = {

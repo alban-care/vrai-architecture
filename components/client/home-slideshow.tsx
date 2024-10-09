@@ -5,6 +5,11 @@ import { Carousel } from "@/components/carousel";
 
 const sliders = [
   {
+    text: "Restaurant",
+    src: require("@/public/img/slider/restaurant.jpg"),
+    alt: "Illustration d'un projet de restaurant",
+  },
+  {
     text: "Architecture",
     src: require("@/public/img/slider/architecture.jpg"),
     alt: "Illustration d'un projet d'architecture",
@@ -28,11 +33,6 @@ const sliders = [
     text: "Boutique",
     src: require("@/public/img/slider/boutique.jpg"),
     alt: "Illustration d'un projet de boutique",
-  },
-  {
-    text: "Restaurant",
-    src: require("@/public/img/slider/restaurant.jpg"),
-    alt: "Illustration d'un projet de restaurant",
   },
 ];
 
